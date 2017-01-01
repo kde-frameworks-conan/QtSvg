@@ -1,2 +1,2 @@
-# qtbase
-Conan package for QtBase
+# qtsvg
+Conan package for QtSvg

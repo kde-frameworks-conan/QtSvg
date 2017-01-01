@@ -39,5 +39,5 @@ class QtBaseConan(ConanFile):
         self.run("cd {} && make -j{}".format(os.path.join(self.conanfile_directory, self.folderName), cpu_count()))
         
     def package(self):
-        self.copy("*", dst="include", src="{}/include".format(self.folderName))
-        self.copy("*", dst="lib", src="lib".format(self.folderName))
+        self.copy("*", dst="include", src=os.path.join(self.folderName, "include"))
+        self.copy("*", dst="lib", src=os.path.join(self.folderName, "lib"))
